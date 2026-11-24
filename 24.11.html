@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mind &amp; Home · Vocabulary</title>
+<style>
+:root{--bg:#fbf6f2;--cd:#fff;--tx:#2a1d17;--mu:#7a6358;--ln:#e6d6cb;--ac:#d9480f;--gr:#1fae6b;--ok:#e3f5ec;--bd:#fde8e8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1a1411;--cd:#241c18;--tx:#f3e9e3;--mu:#b9a498;--ln:#43342c;--ac:#e8590c;--ok:#123325;--bd:#3b1c1c}}
+:root[data-theme=dark]{--bg:#1a1411;--cd:#241c18;--tx:#f3e9e3;--mu:#b9a498;--ln:#43342c;--ac:#e8590c;--ok:#123325;--bd:#3b1c1c}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:760px;margin:0 auto;padding:16px}
+.ey{color:var(--ac);font-weight:700;letter-spacing:.1em;font-size:12px;text-transform:uppercase}
+h1{font-size:1.9rem;margin:.1em 0;letter-spacing:-.02em}h2{font-size:1.2rem;margin:.6em 0 .1em}
+.sub{color:var(--mu);margin:.2em 0 .6em}
+.sc{display:flex;align-items:center;gap:10px;margin:12px 0 6px;font-weight:600}
+.bar{flex:1;height:8px;background:var(--ln);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--gr);transition:width .3s}
+nav{display:flex;gap:6px;overflow-x:auto;padding:4px 0 8px}
+.tb{flex:none;border:1px solid var(--ln);background:var(--cd);color:var(--tx);border-radius:999px;padding:8px 14px;font:inherit;font-size:14px;cursor:pointer}
+.tb.on{background:var(--ac);border-color:var(--ac);color:#fff}.tb small{margin-left:6px;opacity:.9}
+.it{background:var(--cd);border:1px solid var(--ln);border-radius:12px;padding:12px;margin:10px 0}
+.it.ok{border-color:var(--gr);background:var(--ok)}.it.bad{border-color:#e5484d;background:var(--bd)}
+.it p{margin:0 0 6px}.fb{font-size:14px;margin-top:8px}.hint{font-size:13px;color:var(--mu)}
+button{font:inherit;cursor:pointer}
+.o{border:1px solid var(--ln);background:var(--cd);color:var(--tx);border-radius:10px;padding:8px 14px;margin:4px 6px 0 0;text-align:left}
+.o.s{box-shadow:0 0 0 2px var(--ac) inset;border-color:var(--ac)}.o.c{background:var(--gr);color:#fff;border-color:var(--gr)}.o.w{background:#e5484d;color:#fff;border-color:#e5484d}
+input,select,textarea{font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--ln);border-radius:8px;padding:6px 8px;max-width:100%}
+input{width:100%;max-width:22em}textarea{width:100%;display:block;margin-bottom:6px}.g.ok{border-color:var(--gr)}.g.bad{border-color:#e5484d}
+.ac{margin:14px 0}.ac button,.it>button{border-radius:10px;padding:10px 16px;border:1px solid var(--ln);background:var(--cd);color:var(--tx);margin:0 8px 8px 0}
+.ac .pr{background:var(--ac);border-color:var(--ac);color:#fff}
+.sm{font-weight:700;margin:10px 0}.story{line-height:2.4;background:var(--cd);border:1px solid var(--ln);border-radius:12px;padding:12px}
+.res div{font-size:14px;margin:4px 0}
+mark{background:#fde68a;color:#3b2f00;border-radius:4px;padding:0 4px}
+.card{perspective:900px;cursor:pointer;margin:12px 0;outline:none}
+.cf{position:relative;height:320px;transition:transform .45s;transform-style:preserve-3d}
+.card.fl .cf{transform:rotateY(180deg)}
+.fr,.bk{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;border:1px solid var(--ln);border-radius:16px;background:var(--cd);padding:18px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;overflow:auto}
+.bk{transform:rotateY(180deg)}.bk p{margin:6px 0}
+.fr b{font-size:1.6rem;line-height:1.25;margin:8px 0}.fr small,.fr em{color:var(--mu);font-size:13px}
+.df{font-weight:600}.ukr{color:var(--ac);font-size:1.1rem;font-weight:600}.exs{font-style:italic;color:var(--mu)}
+.fcm{color:var(--mu);font-size:14px}.sp{border:1px solid var(--ln);background:var(--bg);border-radius:999px;padding:4px 12px;color:var(--tx)}
+</style></head><body><div class="w">
+<div class="ey">B1+ · Vocabulary practice</div>
+<h1>Mind &amp; Home</h1>
+<p class="sub">Words about habits, complaints, home renovation and feelings. Start with the flashcards, do the tasks, then practise your pronunciation. Come back tomorrow and press “Try again”.</p>
+<div class="sc"><span>Score <span id="sc">0 / 0</span></span><div class="bar"><i id="br"></i></div></div>
+<nav id="tabs"></nav><main id="p"></main>
+<div class="it"><b>Send your results to your teacher</b><p class="sub" style="margin:4px 0 8px">Finish the tasks, then copy your results and paste them into a message.</p><input id="nm" placeholder="Your name" autocomplete="off" style="width:12em"> <button onclick="copyRes()">Copy my results</button><p id="cm" class="fb"></p><textarea id="cr" rows="9" readonly style="display:none"></textarea></div>
+</div>
+<script>
+const $=s=>document.querySelector(s),Q=(e,s)=>[...e.querySelectorAll(s)];
+const norm=s=>s.toLowerCase().replace(/’/g,"'").replace(/[.!?,]/g,"").replace(/\s+/g," ").trim();
+const lev=(a,b)=>{const m=[...Array(b.length+1).keys()];for(let i=1;i<=a.length;i++){let p=m[0];m[0]=i;for(let j=1;j<=b.length;j++){const t=m[j];m[j]=Math.min(m[j]+1,m[j-1]+1,p+(a[i-1]==b[j-1]?0:1));p=t}}return m[b.length]};
+const typed=(v,A)=>{v=norm(v);if(!v)return 0;let r=0;for(const a of A){const n=norm(a),d=lev(v,n),t=0;if(d==0)return 1;if(d<=t)r=2}return r};
+const nS=s=>s.toLowerCase().replace(/’/g,'\'').replace(/n't\b/g,' not').replace(/'m\b/g,' am').replace(/'re\b/g,' are').replace(/'ve\b/g,' have').replace(/[.,!?]/g,'').replace(/\s+/g,' ').trim();
+const fixOk=(v,A)=>{v=nS(v);if(!v)return 0;return A.some(a=>{const n=nS(a);return lev(v,n)<=(n.length>=15?1:0)})?1:0};
+const P=[["be addicted to something / doing something","бути залежним від чогось"],["complain (about something)","скаржитися на щось"],["renovate","ремонтувати, оновлювати приміщення або будівлю"],["renovation","ремонт, оновлення приміщення або будівлі"],["anxious","тривожний, стривожений"],["anxiety","тривога, занепокоєння"]];
+const POS=['PHRASE','VERB','VERB','NOUN','ADJECTIVE · 🗣 pronunciation','NOUN · 🗣 pronunciation'];
+const D=[
+['to like something so much that it is difficult to stop doing it','I’m addicted to watching videos on YouTube before going to bed.'],
+['to say that you are unhappy or annoyed about something','She always complains about the weather, even when it’s sunny.'],
+['to repair and improve a building or room to make it look better','We want to renovate our kitchen because the furniture is quite old.'],
+['the process of repairing and improving a building or room','The renovation of our bathroom took almost two months.'],
+['feeling worried or nervous about something','I always feel anxious before an important meeting.'],
+['a feeling of worry or fear about something','My anxiety sometimes makes it difficult to concentrate on my work.']];
+const PR=[['bought','/bɔːt/','Буквосполучення “ough” тут читається як довге [ɔː], не як у “cough” чи “through”. В кінці чітке t.'],
+['wallet','/ˈwɒlɪt/','W — губи округлені, це не український «в». Літера a = короткий [ɒ], майже «о». Наголос на першому складі.'],
+['anxiety','/æŋˈzaɪəti/','Літера x = [ŋz]. Наголос на другому складі: an-XI-e-ty.'],
+['anxious','/ˈæŋkʃəs/','Літера x = [ŋkʃ]. Наголос на першому складі: ANK-shus.'],
+['function','/ˈfʌŋkʃn/','Голосний u = короткий [ʌ] (схоже на «а»). Закінчення -tion = [ʃn]. Наголос на першому складі.'],
+['church','/tʃɜːtʃ/','Двічі [tʃ] (ч): на початку й в кінці. Голосний довгий [ɜː]. Звук r у британській вимові не чути.']];
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition,PC={};
+const ALL=[...Array(6).keys()],F={d:ALL,i:0,f:0,k:new Set()};
+function spk(t,r){if(!('speechSynthesis' in window))return;const u=new SpeechSynthesisUtterance(t);u.lang='en-GB';u.rate=r||.9;speechSynthesis.cancel();speechSynthesis.speak(u)}
+function say(i,k){spk(k?D[i][1]:P[i][0].replace(' / doing something','').replace(/\(|\)/g,''))}
+function tryIt(i){if(!SR)return;const o=$('#pm'+i),w=PR[i][0];o.textContent='🎤 Listening… say “'+w+'”';const r=new SR();r.lang='en-GB';r.maxAlternatives=5;
+r.onresult=e=>{const a=Array.from(e.results[0]).map(x=>x.transcript.toLowerCase().trim());o.textContent=a.some(t=>t.split(/\s+/).includes(w))?'✓ I heard “'+w+'”. Well done!':'I heard “'+a[0]+'”. Listen again and try once more.'};
+r.onerror=()=>{o.textContent='The microphone did not work here. Just repeat the word aloud.'};r.start()}
+function rp(i){PC[i]=Math.min(3,(PC[i]||0)+1);$('#rp'+i).textContent=(PC[i]==3?'✓ Done ':'✓ I repeated it ')+'('+PC[i]+'/3)'}
+function fc(){const x=F.d[F.i];
+$('#fc').innerHTML=`<div class='fcm'>${F.i+1} / ${F.d.length} · I know it: ${F.k.size} / 6</div><div class='card' tabindex='0' onclick='flip()' onkeydown="if(event.key=='Enter'||event.key==' '){event.preventDefault();flip()}"><div class='cf'><div class='fr'><small>${POS[x]}</small><b>${P[x][0]}</b><button class='sp' onclick='event.stopPropagation();say(${x},0)'>🔊 Listen</button><em>tap the card to flip</em></div><div class='bk'><p class='df'>${D[x][0]}</p><p class='ukr'>${P[x][1]}</p><p class='exs'>“${D[x][1]}”</p><button class='sp' onclick='event.stopPropagation();say(${x},1)'>🔊 Listen</button></div></div></div><div class='ac'><button onclick='mv(-1)'>← Back</button><button class='pr' onclick='mv(1)'>Next →</button><button onclick='mk()'>I know it ✓</button></div><div class='ac'><button onclick='shf()'>Shuffle</button><button onclick='rv()'>Only the ones I don’t know</button><button onclick='rs()'>Start over</button></div>`}
+function flip(){F.f=!F.f;$('.card').classList.toggle('fl')}
+function mv(d){F.i=(F.i+d+F.d.length)%F.d.length;F.f=0;fc()}
+function mk(){F.k.add(F.d[F.i]);mv(1)}
+function shf(){const a=[...F.d];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}F.d=a;F.i=0;F.f=0;fc()}
+function rv(){const u=ALL.filter(i=>!F.k.has(i));F.d=u.length?u:ALL;F.i=0;F.f=0;fc()}
+function rs(){F.k.clear();F.d=ALL;F.i=0;F.f=0;fc()}
+const ph=i=>`<b>${P[i][0]}</b> — ${P[i][1]}`;
+const T=[
+{n:"Cards",t:"Study the words",s:"Tap the card to flip it: the front shows the word, the back shows the meaning, the Ukrainian translation and an example. Press 🔊 to hear it.",k:"cards"},
+{n:"Choose",t:"1. Choose the right word",s:"Choose the best answer. Watch the prepositions and the word forms.",k:"mc",d:[
+["I’m addicted ___ watching videos before bed.",["of","with","to"],2,0],
+["She always complains ___ the weather.",["for","about","with"],1,1],
+["to say that you are unhappy or annoyed about something",["to renovate","to be addicted to something","to complain"],2,1],
+["The ___ of our bathroom took two months.",["renovate","renovation","renovating"],1,3],
+["I always feel ___ before an important meeting.",["anxiety","anxiously","anxious"],2,4],
+["My ___ makes it difficult to concentrate on my work.",["anxious","anxiety","anxiously"],1,5],
+["to like something so much that it is difficult to stop doing it",["to complain","to renovate","to be addicted to something"],2,0],
+["We want to ___ our kitchen because the furniture is old.",["renovated","renovation","renovate"],2,2]]},
+{n:"Type it",t:"2. Type the missing word",s:"Write the missing word. The hint shows the first letter and the length. Spelling counts.",k:"gap",d:[
+["I think I’m ___ to my phone.",["addicted"],0],
+["My neighbour always ___ about the noise.",["complains"],1],
+["They are going to ___ the old house and sell it.",["renovate"],2],
+["The ___ of the flat cost a lot of money.",["renovation"],3],
+["I always feel ___ before an exam.",["anxious"],4],
+["Her ___ about the exam kept her awake all night.",["anxiety"],5],
+["Many teenagers are addicted ___ social media.",["to"],0],
+["Stop ___! The food is not that bad.",["complaining"],1]]},
+{n:"Fix it",t:"3. Fix the mistake",s:"Each sentence has a mistake. Write the correct sentence. Contractions are fine (I’m = I am).",k:"fix",d:[
+['She is addicted of chocolate.',['She is addicted to chocolate.'],'We say “addicted to”. · addicted to (не of).'],
+['He always complains for the food.',['He always complains about the food.'],'We say “complain about”. · complain about.'],
+['The renovate of our house took three months.',['The renovation of our house took three months.'],'After “the” we need a noun: renovation (noun), renovate (verb). · renovation = іменник.'],
+['I feel very anxiety before the test.',['I feel very anxious before the test.'],'After “feel” use an adjective: anxious. Anxiety is a noun. · anxious = прикметник.'],
+['Her anxious makes it hard to sleep.',['Her anxiety makes it hard to sleep.'],'After “her” we need a noun: anxiety. · anxiety = іменник.'],
+['I’m addicted to watch series at night.',['I’m addicted to watching series at night.'],'In “addicted to”, the word “to” is a preposition, so use -ing: watching. · addicted to + -ing.'],
+['We renovation the flat last year.',['We renovated the flat last year.'],'After “we” we need a verb in the past: renovated. · renovated = дієслово.'],
+['They complained me about the noise.',['They complained to me about the noise.'],'We say “complain to someone about something”. · complain to someone about.']]},
+{n:"Story",t:"4. Two problems at home",s:"Choose the best word for each gap.",k:"story",
+x:"There are two problems in our family. First, my brother is {1} playing computer games: he plays for hours and goes to bed very late. My mother often {2} about it, but he doesn’t listen. Second, we want to {3} our flat, because the furniture is old. The {4} will take two months, so we will have a lot of noise. I feel very {5} about it, and my {6} gets worse when I can’t sleep.",
+d:[[["addicted of","addicted to","addicting to"],1,0],[["complaints","complains","complain"],1,1],[["renovation","renovate","renovated"],1,2],[["renovate","renovating","renovation"],2,3],[["anxiety","anxious","anxiously"],1,4],[["anxious","anxiety","anxiously"],1,5]]},
+{n:"Say it",t:"5. Listen and repeat",s:"Press 🔊 and listen. Read the tip, then say the word aloud three times. The microphone check (if you see it) is only a rough guide.",k:"pron"},
+{n:"Your turn",t:"6. Your turn",s:"Write 1–2 sentences, then compare with a model answer. This task is self-checked and not scored.",k:"w",d:[
+["Are you addicted to anything (your phone, series, coffee)? Tell us.","I think I’m a bit addicted to my phone: I check it every few minutes, even when I’m working.","be addicted to something"],
+["What do people often complain about in your city?","People often complain about the traffic and the high prices.","complain about"],
+["Would you like to renovate something at home? What?","I would like to renovate my bathroom because the tiles are very old. The renovation will probably take a month.","renovate, renovation"],
+["When do you feel anxious? What helps you?","I feel anxious before important exams. A short walk helps me to calm down.","anxious"],
+["Describe a time when you felt anxiety. What happened?","Last year I felt strong anxiety before a job interview, and I couldn’t sleep the night before.","anxiety"]]}];
+const S={c:0,r:[]};
+const N=t=>t.k=='w'||t.k=='cards'||t.k=='pron'?0:t.d.length;
+const hint=a=>a.split(' ').map(w=>w[0]+'_'.repeat(w.length-1)).join(' ');
+const B={
+cards:()=>"<div id='fc'></div>",
+pron:()=>PR.map((p,i)=>`<div class='it'><p><b style='font-size:1.25rem'>${p[0]}</b> <span class='hint'>${p[1]}</span></p><p class='hint'>${p[2]}</p><button onclick="spk('${p[0]}',.9)">🔊 Listen</button><button onclick="spk('${p[0]}',.5)">🐢 Slowly</button>${SR?`<button onclick='tryIt(${i})'>🎤 Say it</button>`:''}<button id='rp${i}' onclick='rp(${i})'>✓ I repeated it (0/3)</button><p class='fb' id='pm${i}'></p></div>`).join(''),
+mc:t=>t.d.map((d,i)=>`<div class='it'><p>${i+1}. ${d[0].replace('___','<b>_____</b>')}</p>${d[1].map((o,j)=>`<button class='o' onclick='pick(this,${i},${j})'>${o}</button>`).join('')}<div class='fb'></div></div>`).join(''),
+gap:t=>t.d.map((d,i)=>`<div class='it'><p>${i+1}. ${d[0].replace('___','<b>_____</b>')}</p><input autocomplete='off' autocapitalize='off' spellcheck='false' aria-label='answer ${i+1}'><p class='hint'>Hint: ${hint(d[1][0])}</p><div class='fb'></div></div>`).join(''),
+fix:t=>t.d.map((d,i)=>`<div class='it'><p>${i+1}. <mark>${d[0]}</mark></p><input autocomplete='off' autocapitalize='off' spellcheck='false' placeholder='Write the correct sentence' aria-label='correction ${i+1}' style='max-width:100%'><div class='fb'></div></div>`).join(''),
+story:t=>`<div class='story'>${t.x.replace(/\{(\d)\}/g,(m,n)=>`<select class='g' aria-label='gap ${n}'><option value=''>…</option>${t.d[n-1][0].map((o,j)=>`<option value='${j}'>${o}</option>`).join('')}</select>`)}</div>`,
+w:t=>t.d.map((d,i)=>`<div class='it'><p>${i+1}. ${d[0]}</p><p class='hint'>Try to use: ${d[2]}</p><textarea rows='3' placeholder='Write your answer…'></textarea><button onclick='mdl(this,${i})'>Show model answer</button><div class='fb'></div></div>`).join('')};
+function build(c){const t=T[c];S.r[c]={v:{},done:0,pts:0};
+$('#s'+c).innerHTML=`<h2>${t.t}</h2><p class='sub'>${t.s}</p>`+B[t.k](t)+(['cards','w','pron'].includes(t.k)?'':`<div class='ac'><button class='pr' onclick='chk()'>Check</button><button onclick='again()'>Try again</button></div><div class='res'></div>`);
+if(t.k=='cards')fc()}
+function pick(b,i,j){const r=S.r[S.c];if(r.done)return;r.v[i]=j;Q(b.parentNode,'.o').forEach(x=>x.classList.remove('s'));b.classList.add('s')}
+function mdl(b,i){const it=b.parentNode,f=Q(it,'.fb')[0];f.innerHTML=Q(it,'textarea')[0].value.trim().length<5?'Write your own answer first, then compare.':`<b>Model answer:</b> ${T.find(x=>x.k=='w').d[i][1]}`}
+function chk(){const c=S.c,t=T[c],r=S.r[c],s=$('#s'+c);if(r.done)return;let n=0;
+const fin=(ok,a,i,ty)=>`${ok?'✓':'✗'} ${ok?(ty==2?`Almost, check the spelling: <b>${a}</b>. `:''):`Answer: <b>${a}</b>. `}${ph(i)}`;
+if(t.k=='story'){const L=[];Q(s,'.g').forEach((e,i)=>{const d=t.d[i],ok=e.value==d[1];e.classList.add(ok?'ok':'bad');n+=ok;L.push(`<div>${i+1}. ${fin(ok,d[0][d[1]],d[2])}</div>`)});Q(s,'.res')[0].innerHTML=L.join('')}
+else Q(s,'.it').forEach((el,i)=>{const d=t.d[i];let ok,a,pi,ty=1;
+if(t.k=='fix'){const o=fixOk(Q(el,'input')[0].value,d[1]);el.classList.add(o?'ok':'bad');Q(el,'.fb')[0].innerHTML=(o?'✓ ':'✗ Correct: <b>'+d[1][0]+'</b>.<br>')+'<small>'+d[2]+'</small>';n+=o;return}
+if(t.k=='mc'){ok=r.v[i]===d[2];a=d[1][d[2]];pi=d[3];Q(el,'.o').forEach((b,j)=>{if(j==d[2])b.classList.add('c');else if(j===r.v[i])b.classList.add('w')})}
+else{ty=typed(Q(el,'input')[0].value,d[1]);ok=ty>0;a=d[1][0];pi=d[2]}
+el.classList.add(ok?'ok':'bad');Q(el,'.fb')[0].innerHTML=fin(ok,a,pi,ty);n+=ok});
+r.done=1;r.pts=n;Q(s,'input,select,.it .o').forEach(e=>e.disabled=true);
+const m=`<div class='sm'>${n} / ${N(t)} ${n==N(t)?'· Perfect!':'· Read the notes, then try again.'}</div>`;
+if(t.k=='story')Q(s,'.res')[0].insertAdjacentHTML('afterbegin',m);else Q(s,'.res')[0].innerHTML=m;upd()}
+async function copyRes(){const nm=$('#nm').value.trim();let o='Mind & Home vocabulary - results'+(nm?' - '+nm:'')+'\nScore: '+$('#sc').textContent+'\n';
+T.forEach((t,c)=>{if(t.k=='cards'||t.k=='pron')return;const r=S.r[c],s=$('#s'+c);let L=[];
+if(t.k=='w'){Q(s,'textarea').forEach((e,i)=>{if(e.value.trim())L.push((i+1)+'. '+t.d[i][0]+'\n   '+e.value.trim())})}
+else if(!r.done){o+='\n'+t.t+': not checked yet\n';return}
+else if(t.k=='story'){Q(s,'.g').forEach((e,i)=>L.push((i+1)+'. '+e.options[e.selectedIndex].text+(e.classList.contains('ok')?' ✓':' ✗ -> '+t.d[i][0][t.d[i][1]])))}
+else Q(s,'.it').forEach((el,i)=>{const d=t.d[i];let g,a;if(t.k=='mc'){g=d[1][r.v[i]]||'-';a=d[1][d[2]]}else{g=Q(el,'input')[0].value||'-';a=d[1][0]}
+L.push((i+1)+'. '+g+(el.classList.contains('ok')?' ✓':' ✗ -> '+a))});
+if(L.length)o+='\n'+t.t+(t.k=='w'?'':': '+r.pts+'/'+N(t))+'\n'+L.join('\n')+'\n'});
+const ta=$('#cr');ta.style.display='block';ta.value=o;ta.select();let ok=0;
+try{await navigator.clipboard.writeText(o);ok=1}catch(e){try{ok=document.execCommand('copy')}catch(e2){}}
+$('#cm').textContent=ok?'Copied! Paste it into a message to your teacher.':'Select the text below, copy it and send it to your teacher.'}
+function again(){build(S.c);upd()}
+function go(i){S.c=i;T.forEach((_,j)=>$('#s'+j).hidden=j!=i);upd()}
+function upd(){let p=0,m=0;T.forEach((t,i)=>{p+=S.r[i].pts;m+=N(t)});
+$('#sc').textContent=p+' / '+m;$('#br').style.width=(m?100*p/m:0)+'%';
+$('#tabs').innerHTML=T.map((t,i)=>`<button class='tb ${i==S.c?'on':''}' onclick='go(${i})'>${t.n}<small>${S.r[i].done&&N(t)?S.r[i].pts+'/'+N(t):''}</small></button>`).join('')}
+$('#p').innerHTML=T.map((_,i)=>`<section id='s${i}' hidden></section>`).join('');
+T.forEach((_,i)=>build(i));go(0);
+</script></body></html>
